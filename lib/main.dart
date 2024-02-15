@@ -10,6 +10,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'home.dart';
 import 'home.dart';
+import 'da.dart';
 import 'onboarding.dart';
 import 'tou.dart';
 
@@ -24,6 +25,8 @@ Future<void> main() async {
   ));
 
   await FirebaseRemoteConfig.instance.fetchAndActivate();
+
+  await NotificationsFirebase().activate();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitDown,
     DeviceOrientation.portraitUp,
@@ -53,7 +56,6 @@ class _MainAppState extends State<MainApp> {
     }
     return null;
   }
-
 
   @override
   Widget build(BuildContext context) {
