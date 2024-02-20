@@ -9,7 +9,7 @@ class Logo extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width - 40,
-      height: 165,
+      height: MediaQuery.of(context).size.height / 4,
       child: Row(
         children: [
           Expanded(
