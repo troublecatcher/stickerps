@@ -1,3 +1,4 @@
+import 'package:dqed1/pay_attention/customization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
@@ -7,10 +8,7 @@ class TermsOfUseScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 0, 253, 168),
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 0, 253, 168),
-      ),
+      appBar: AppBar(),
       body: SafeArea(
         bottom: false,
         child: InAppWebView(
@@ -31,16 +29,12 @@ class TermssOfUseScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 0, 253, 168),
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 0, 253, 168),
-      ),
+      appBar: AppBar(),
       body: SafeArea(
         bottom: false,
         child: InAppWebView(
           initialUrlRequest: URLRequest(
-            url: WebUri(
-                data),
+            url: WebUri(data),
           ),
         ),
       ),

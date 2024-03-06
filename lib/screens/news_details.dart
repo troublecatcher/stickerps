@@ -1,6 +1,7 @@
+import 'package:dqed1/pay_attention/customization.dart';
 import 'package:flutter/material.dart';
 
-import 'news.dart';
+import '../news.dart';
 
 class NewsDetails extends StatelessWidget {
   final News news;
@@ -12,7 +13,8 @@ class NewsDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Details'),
+        title: const Text('Details',
+            style: TextStyle(fontWeight: FontWeight.w700)),
       ),
       body: SafeArea(
         child: SingleChildScrollView(

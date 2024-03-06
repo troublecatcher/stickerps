@@ -18,7 +18,7 @@ class Logo extends StatelessWidget {
               children: [
                 Transform.rotate(
                   angle: -15.67 * (pi / 180),
-                  child: Image.asset('assets/1.webp'),
+                  child: Image.asset('assets/stickers/1.webp'),
                 ),
               ],
             ),
@@ -29,7 +29,7 @@ class Logo extends StatelessWidget {
               children: [
                 Transform.rotate(
                   angle: -15.67 * (pi / 180),
-                  child: Image.asset('assets/2.webp'),
+                  child: Image.asset('assets/stickers/2.webp'),
                 ),
               ],
             ),
@@ -38,7 +38,7 @@ class Logo extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Image.asset('assets/3.webp'),
+                Image.asset('assets/stickers/3.webp'),
               ],
             ),
           ),
@@ -48,7 +48,7 @@ class Logo extends StatelessWidget {
               children: [
                 Transform.rotate(
                   angle: 15.67 * (pi / 180),
-                  child: Image.asset('assets/4.webp'),
+                  child: Image.asset('assets/stickers/4.webp'),
                 ),
               ],
             ),
@@ -59,7 +59,7 @@ class Logo extends StatelessWidget {
               children: [
                 Transform.rotate(
                   angle: 15.67 * (pi / 180),
-                  child: Image.asset('assets/5.webp'),
+                  child: Image.asset('assets/stickers/5.webp'),
                 ),
               ],
             ),

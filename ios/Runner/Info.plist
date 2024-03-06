@@ -24,8 +24,6 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.6.0</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>We need access to your camera for sharing stickers</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fb</string>
@@ -45,6 +43,8 @@
 	<array>
 		<string>_dartobservatory._tcp</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need access to your camera for sharing stickers</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UIBackgroundModes</key>

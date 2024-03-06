@@ -1,18 +1,15 @@
-import 'dart:io';
-
-import 'package:dqed1/dat.dart';
-import 'package:dqed1/onboarding.dart';
+import 'package:dqed1/pay_attention/customization.dart';
+import 'package:dqed1/screens/onboarding_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'home.dart';
-import 'home.dart';
-import 'da.dart';
-import 'onboarding.dart';
-import 'tou.dart';
+import 'network/da.dart';
+import 'network/dat.dart';
+import 'screens/home_screen.dart';
+import 'screens/terms_of_use.dart';
 
 late SharedPreferences sharedPreferences;
 late bool? isFirstTime;
@@ -60,13 +57,14 @@ class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(splashColor: Colors.transparent),
+      theme: getTheme(context),
       debugShowCheckedModeBanner: false,
       home: FutureBuilder<String?>(
           future: fetchConfiguration(),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return Scaffold(body: Center(child: CircularProgressIndicator()));
+              return const Scaffold(
+                  body: Center(child: CircularProgressIndicator()));
             }
             if (snapshot.connectionState == ConnectionState.done) {
               String? configurationData = snapshot.data;

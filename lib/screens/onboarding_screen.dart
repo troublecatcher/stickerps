@@ -1,11 +1,12 @@
+import 'package:dqed1/pay_attention/customization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'home.dart';
-import 'logo.dart';
-import 'main.dart';
-import 'pp.dart';
-import 'tou.dart';
+import 'home_screen.dart';
+import '../widgets/logo.dart';
+import '../main.dart';
+import 'privacy_policy.dart';
+import 'terms_of_use.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -13,7 +14,7 @@ class OnboardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(231, 231, 231, 1),
+      backgroundColor: primaryColor,
       body: SafeArea(
           child: Stack(
         children: [
@@ -37,10 +38,9 @@ class OnboardingScreen extends StatelessWidget {
               SizedBox(
                 width: MediaQuery.of(context).size.width - 40,
                 child: CupertinoButton(
-                    color: const Color.fromRGBO(249, 249, 249, 1),
-                    child: const Text('Get started',
-                        style:
-                            TextStyle(color: Color.fromRGBO(111, 207, 151, 1))),
+                    color: accentColor,
+                    child:
+                        Text('Get started', style: TextStyle(color: textColor)),
                     onPressed: () async {
                       isFirstTime = false;
                       sharedPreferences.setBool('isFirstTime', isFirstTime!);
@@ -60,8 +60,8 @@ class OnboardingScreen extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (_) => const TermsOfUseScreen()));
                       },
-                      child: const Text('Terms of use',
-                          style: TextStyle(color: Colors.black))),
+                      child: Text('Terms of use',
+                          style: TextStyle(color: textColor))),
                   const Text('/'),
                   TextButton(
                       onPressed: () {
@@ -70,8 +70,8 @@ class OnboardingScreen extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (_) => const PrivacyPolicyScreen()));
                       },
-                      child: const Text('Privacy Policy',
-                          style: TextStyle(color: Colors.black))),
+                      child: Text('Privacy Policy',
+                          style: TextStyle(color: textColor))),
                 ],
               ),
             ],

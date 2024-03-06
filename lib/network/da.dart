@@ -1,5 +1,6 @@
-import 'package:dqed1/notes.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+
+import 'notes.dart';
 
 class NotificationsFirebase {
   late final FirebaseMessaging _messaging;
